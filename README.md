@@ -28,8 +28,6 @@ unzip kubeless_darwin-amd64.zip
 sudo cp bundles/kubeless_darwin-amd64/kubeless /usr/local/bin/
 ```
 
-<br/>
-
 ## Launch Kubernetes locally
 
 ### Start Minikube
@@ -57,8 +55,6 @@ kubectl cluster-info
 ```
 minikube dashboard
 ```
-
-<br/>
 
 ## Deploy a sample Python function
 
@@ -88,15 +84,13 @@ Call the function from the terminal:
 kubeless function call hello --data 'Hello world!'
 ```
 
-<br/>
-
 ## Expose the sample function
 
-Now, we need to enable ingress to expose the function via HTTP:
+Now, we need to enable ingress to expose the function via HTTP. Run the following and confirm that `default-http-backend` is added.
 
 ```
 minikube addons enable ingress
-minikube service list # confirm that a new `default-http-backend` is added
+minikube service list
 ```
 
 Create an HTTP trigger object and check for it:
@@ -116,8 +110,6 @@ curl --data '{"message": "Hello World!"}' \
  --header "Content-Type:application/json" \
  192.168.99.100.nip.io/hello
 ```
-
-<br/>
 
 ## Deploy a sample NodeJS function
 
