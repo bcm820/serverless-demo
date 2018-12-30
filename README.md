@@ -130,8 +130,18 @@ kubeless trigger http create hello --function-name hello --path hello
 ### Test
 
 ```
+kubeless function call quicksort --data '[91,1,23,3,-10,37,85,5,11,62,6,76,49,7,53,-3]'
+```
+
+```
 curl --data '[91,1,23,3,-10,37,85,5,11,62,6,76,49,7,53,-3]' \
  --header "Host: quicksort.192.168.99.100.nip.io" \
  --header "Content-Type:application/json" \
  192.168.99.100.nip.io/quicksort
+```
+
+## Clean up
+
+```
+minikube delete
 ```
