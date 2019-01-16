@@ -32,7 +32,7 @@ SWOT analysis:
 
 
     Weaknesses:
-
+        How to redeploy when code is changed? git push?
 
 
     Opportunities:

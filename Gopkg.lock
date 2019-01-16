@@ -2,12 +2,36 @@
 
 
 [[projects]]
+  digest = "1:0a69a1c0db3591fcefb47f115b224592c8dfa4368b7ba9fae509d5e16cdc95c8"
+  name = "github.com/konsorten/go-windows-terminal-sequences"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "5c8c8bd35d3832f5d134ae1e1e375b69a4d25242"
+  version = "v1.0.1"
+
+[[projects]]
   digest = "1:31ce689b2b56c504bf1f0d5ae6537c4df8c89d449d468c1a6990a0227e6ce7e1"
   name = "github.com/kubeless/kubeless"
   packages = ["pkg/functions"]
   pruneopts = "UT"
   revision = "9a7482bdcb38a2c25e3135ee792c6a9ef93a4f8c"
   version = "v1.0.1"
+
+[[projects]]
+  digest = "1:87c2e02fb01c27060ccc5ba7c5a407cc91147726f8f40b70cceeedbc52b1f3a8"
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "e1e72e9de974bd926e5c56f83753fba2df402ce5"
+  version = "v1.3.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:38f553aff0273ad6f367cb0a0f8b6eecbaef8dc6cb8b50e57b6a81c1d5b1e332"
+  name = "golang.org/x/crypto"
+  packages = ["ssh/terminal"]
+  pruneopts = "UT"
+  revision = "ff983b9c42bc9fbf91556e191cc8efb585c16908"
 
 [[projects]]
   branch = "master"
@@ -17,9 +41,23 @@
   pruneopts = "UT"
   revision = "915654e7eabcea33ae277abbecf52f0d8b7a9fdc"
 
+[[projects]]
+  branch = "master"
+  digest = "1:0150ad9329793acacd98bcbd88492d9e4731824b5d3fbc73a8a1b45eb21acf6b"
+  name = "golang.org/x/sys"
+  packages = [
+    "unix",
+    "windows",
+  ]
+  pruneopts = "UT"
+  revision = "a457fd036447854c0c02e89ea439481bdcf941a2"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/kubeless/kubeless/pkg/functions"]
+  input-imports = [
+    "github.com/kubeless/kubeless/pkg/functions",
+    "github.com/sirupsen/logrus",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
