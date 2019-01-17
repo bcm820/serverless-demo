@@ -15,6 +15,7 @@ func Handler(event functions.Event, context functions.Context) (string, error) {
 	return "hello decipher", nil
 }
 
+//this can be used for timeout events
 func Foo(event functions.Event, context functions.Context) (string, error) {
 	select {
 	case <-event.Extensions.Context.Done():
